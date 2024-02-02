@@ -22,7 +22,7 @@ jobs:
       - name: Format Build Tag
         id: format-build-tag
         shell: bash
-        run: echo "build-tag=b${GITHUB_RUN_NUMBER}-${GITHUB_SHA::8}" >> "$GITHUB_OUTPUT
+        run: echo "build-tag=b${GITHUB_RUN_NUMBER}-${GITHUB_SHA::8}" >> "$GITHUB_OUTPUT"
 
       - name: Set Docker metadata
         id: meta
