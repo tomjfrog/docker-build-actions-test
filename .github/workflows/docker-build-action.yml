@@ -38,6 +38,8 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
+          # This will dictate whether or not a non-OCI formatted Manifest will get created or not. It's 'true' by default
+          # ref https://github.com/docker/setup-buildx-action/issues/187
           provenance: false
           context: .
           file: Dockerfile
